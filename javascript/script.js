@@ -55,6 +55,16 @@ function playRound(comp, hum){
 
     console.log(humanScore , computerScore)
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(computerSelection, humanSelection);
+
+function playGame(){
+    for (let i = 0; i < 6; i++) { // loops 5 times
+        let humanSelection = getHumanChoice(); //sets human choice every round
+        let computerSelection = getComputerChoice(); // sets comp choice every round
+        playRound(computerSelection, humanSelection); //playRound function as described above
+        console.log("round number ", i); //prints round number
+        console.log("humans: ", humanScore, "computer: ", computerScore); // prints score at the end of each round.
+    }
+}
+playGame();
+
+
